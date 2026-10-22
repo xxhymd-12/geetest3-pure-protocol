@@ -319,28 +319,9 @@ else:
 - 脚本未做异常隔离与重试；批量运行建议在 `main()` 外层加 `try/except` 并统计成功率。
 - 相对路径依赖运行目录，部署时请保持 `极验3/` 与 `pool.json`、`trajectory_pool.py` 的相对结构。
 
-## 十、上传 GitHub
+## 十、许可与声明
 
-本目录已经完成 `git init` 和首次提交（分支 `main`），只需添加远程仓库并推送：
-
-```bash
-cd geetest3-pure-protocol
-git remote add origin https://github.com/<your-name>/geetest3-pure-protocol.git
-git push -u origin main
-```
-
-如果要在 GitHub 上新建仓库，也可以直接用 GitHub CLI：
-
-```bash
-gh repo create geetest3-pure-protocol --public --source=. --push
-```
-
-`.gitignore` 已排除运行产物（`bg.jpg`、`slice.jpg`、`bg_hy.jpg`）、
-`node_modules/`、`__pycache__/` 和本地失败记录 `failures.json`。
-
-## 十一、许可与声明
-
-- 本项目中的 Python 代码仅用于学习研究，未指定开源许可证；如需开源请自行添加 `LICENSE`。
+- 本项目中的 Python 代码仅用于学习研究，不构成任何授权。
 - `w_2.js` / `w_3.js` 为对极验前端加密逻辑的逆向还原，版权归原权利人所有，
   不随本项目授权；如权利人要求，请删除相关文件。
 - 再次提醒：请勿将本项目用于未授权的真实站点。
