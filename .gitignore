@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.idea/
+.vscode/
+node_modules/
+
+# runtime artifacts
+bg.jpg
+slice.jpg
+bg_hy.jpg
+failures.json
+*.log
+
+.DS_Store
+Thumbs.db
