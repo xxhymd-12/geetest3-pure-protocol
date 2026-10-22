@@ -22,6 +22,13 @@
   如果还不理解轨迹池，或者想自己收集真人轨迹、从零构建一个池子，请先读这个仓库；
   本仓库只保留运行所需的 `pool.json` 和 `trajectory_pool.py`。
 
+## 逆向过程
+
+从「浏览器自动化先跑通」到「纯协议稳定提交」的完整过程、踩坑记录和错误码对照，
+见 [docs/逆向过程.md](docs/逆向过程.md)。里面记录了 `fail` / `forbidden` /
+`param decrypt error` / `used captcha` 分别对应哪一层问题，以及为什么
+「参数都对但就是 forbidden」最终是会话状态的问题。
+
 ## 二、请求链路
 
 ```
@@ -69,6 +76,8 @@ geetest3-pure-protocol/
 ├── .gitignore
 ├── pool.json                    # 305 条真人轨迹的预建索引
 ├── trajectory_pool.py           # 轨迹池：分桶 / 取样 / 扰动 / 失败淘汰
+├── docs/
+│   └── 逆向过程.md               # 从浏览器自动化到纯协议的完整过程与踩坑记录
 └── 极验3/
     ├── 极验3.py                 # 主入口（纯协议）
     ├── w_2.js                   # get_w1 / get_w_2
