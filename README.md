@@ -11,6 +11,38 @@
 
 ---
 
+## 成功验证
+
+连续运行 9 次：**6 次 success，3 次 forbidden**（纯协议 + 轨迹池）。
+
+![终端运行结果](docs/media/terminal-results.png)
+
+[查看原图](docs/media/terminal-results.png)
+
+页面验证成功：
+
+![页面验证成功](docs/media/page-success.png)
+
+`ajax.php` 返回：
+
+![ajax 返回 success](docs/media/ajax-success.png)
+
+第一次手动闭环时的“拼图验证成功”浮层：
+
+![拼图验证成功](docs/media/browser-success.png)
+
+### 失败对照
+
+`fail` 是距离/轨迹层，`forbidden` 是 w/会话层，两者不要混为一谈：
+
+![ajax fail](docs/media/ajax-fail.png)
+
+> 终端截图来自一次连续运行：6 次 success、3 次 forbidden。
+> 个别 `forbidden` 属于会话/风控波动，不代表轨迹失败；详细错误码对照见
+> [docs/逆向过程.md](docs/逆向过程.md)。
+
+---
+
 ## 一、项目特点
 
 - **纯协议**：不启动浏览器，全部请求由 `requests` 完成；JS 加密逻辑由 `execjs` 调用本地 Node.js 执行。
